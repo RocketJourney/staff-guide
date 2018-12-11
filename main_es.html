@@ -55,35 +55,56 @@
       <div class="tip">
         <h4>¿Qué gana el cliente?</h4>
         <p>Lo que tu gym decida. <i>Por ejemplo: Llega a una racha de 12 semanas y gana 1 sesión personalizada.</i> </p>
-        </div>
+      </div>
 
-        <div class="tip">
-          <h4>¿Cómo promociono la app?</h4>
-          <p>Recomiéndale la app a cada cliente nuevo al inscribirse.</p>
-          <p>Envíale a tus clientes el link de descarga por email, whatsapp o redes sociales.</p>
-          <a class="btn btn-warning" href="https://www.dropbox.com/home/RocketJourney/unorganized/Material%20de%20Promoci%C3%B3n">Descargar Diseños Promocionales</a>
+      <div class="tip">
+        <h4>¿Cómo promociono la app?</h4>
+        <p>Recomiéndale la app a cada cliente nuevo al inscribirse.</p>
+        <p>Envíale a tus clientes el link de descarga por email, whatsapp o redes sociales:</p>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control download-link" value="www.rocketjourney.com">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary download-link" type="button" id="copy-link-button">Copiar Link</button>
+          </div>
         </div>
+        <p id="link-copy-result"></p>
+        <p>Y descarga imagenes para compartir en redes sociales y whatsapp:</p>
+        <a class="btn btn-warning" href="https://www.dropbox.com/home/RocketJourney/unorganized/Material%20de%20Promoci%C3%B3n">Descargar Diseños Promocionales</a>
       </div>
     </div>
+  </div>
 
-    <footer>
-      <div class="container">
+  <footer>
+    <div class="container">
       <h4>¿Te quedan dudas?</h4>
       <p>Contáctanos por whatsapp:</p>
       <p class="important-info">(644) 173 0535</p>
       <p>o por email:</p>
       <p class="important-info"> <a href="mailto:admin@rocketjourney.com">admin@rocketjourney.com</a> </p>
-</div>
-    </footer>
+    </div>
+  </footer>
 
-    <script src="js/vendor/modernizr-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="js/vendor/clipboard-polyfill.promise.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
 
 
-  </body>
+  <script>
+  document.getElementById("copy-link-button").addEventListener("click", function() {
+    var resultField = document.getElementById("link-copy-result");
 
-  </html>
+    clipboard.writeText("https://www.rocketjourney.com").then(function(){
+      resultField.textContent = "Link Copiado!";
+    }, function(err){
+      resultField.textContent = err;
+    });
+  });
+  </script>
+
+</body>
+
+</html>

@@ -70,3 +70,27 @@ footer a {
   color:#fafafa;
   text-decoration: underline;
 }
+
+input.download-link {
+  background-color: #3a3a3a;
+  border: 1px solid #5a5a5a;
+  color: #ffcc00;
+}
+
+button.download-link {
+  background-color: #ffcc00;
+  border: none;
+  color: #1a1a1a;
+  font-weight: bold;
+}
+
+button.download-link:focus, button.download-link:active, button.download-link:hover {
+  background-color: #212121;
+  border: solid 1px #9a9a9a;
+  color: #9a9a9a;
+}
+
+#link-copy-result {
+  margin-bottom: 30px;
+  color: #A3E658;
+}
