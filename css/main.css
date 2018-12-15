@@ -71,9 +71,9 @@ footer a {
   text-decoration: underline;
 }
 
-input.download-link {
+input.download-link:read-only {
   background-color: #3a3a3a;
-  border: 1px solid #5a5a5a;
+  border: 1px solid #ffcc00;
   color: #ffcc00;
 }
 
